@@ -1,18 +1,58 @@
 $nice: rgb(210, 24, 164);
+$deepBlue: #032f3e;
+$offWhite: #f8f9fb;
+$green: rgb(3, 119, 60);
 
 p {
   color: black;
 }
 
-div #nav-bar {
-
+#root {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
-.logo a {
-  color: $nice;
+
+.navbar {
+  background: $deepBlue;
 }
 
-.link {
-  background-color: $nice;
-  width: 100px;
-  height: 100px;
+.clicky {
+  width: 100%;
+
+  // how did people ever figure out this way
+  // of applying background? HOW?
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .logo a {
+    color: rgb(31, 173, 122) !important;
+  }
+
+  .link, .logo {
+
+    a {
+      display: block;
+      text-align: center;
+      color: $offWhite;
+      padding: 7px 12px 7px 12px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $green;
+      }
+    }
+
+    float: left;
+    width: 10%;
+    font-size: 1.5em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

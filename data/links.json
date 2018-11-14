@@ -1,0 +1,9 @@
+{
+  "links": [
+    ["VK", "https://vk.com/feed"],
+    ["This", "/"],
+    ["NodeJS", "https://nodejs.org/dist/latest-v10.x/docs/api/"],
+    ["links", "/links"],
+    ["Nowhere", "/a"]
+  ]
+}
