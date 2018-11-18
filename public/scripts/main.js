@@ -4,12 +4,12 @@ console.log(window.location.host);
 $(document).ready(function() {
 
   // fill navbar with links
-  $.getJSON(location + 'links', function(data) {
+  $.getJSON(window.location.href + 'links', function(data) {
     let links = data.links;
     let clicky = $(".clicky");
 
     for (let i = 0; i < links.length; i++) {
-      let div = $("<div>")
+      let li = $("<li>")
         .addClass('link');
 
       // what 'target' to use +
@@ -18,9 +18,9 @@ $(document).ready(function() {
 
       $("<a>").attr(pars)
         .html(links[i][0])
-        .appendTo(div);
+        .appendTo(li);
 
-      clicky.append(div);
+      clicky.append(li);
     }
   });
 });
